@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Vaishnav Café | Satvik Pure Veg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="cafe.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <img src="https://media.istockphoto.com/id/1307258333/vector/chef-line-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=LMq9kfjbPInJYh7le01Rb48n4USvG38Y3mvSbu6g-0Q=" alt="The Vaishnav Café logo" class="logo-img" />
+      </div>
+      <div>
+        <div class="logo-title">The Vaishnav Café</div>
+        <p class="logo-tagline">Satvik flavours, soulful plates</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="nav-cta" onclick="scrollToSection('order')">Order Now</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-pill">100% Satvik • Pure Veg • No Onion, No Garlic</span>
+        <h1 class="hero-heading">
+          Comforting Satvik meals,<br />
+          crafted fresh for every plate.
+        </h1>
+        <p class="hero-subtitle">
+          At The Vaishnav Café, every dish is cooked on order with fresh ingredients,
+          traditional Satvik recipes, and absolutely no preservatives.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="scrollToSection('order')">
+            <span class="btn-text">Schedule Your Tiffin</span>
+            <span class="loader"></span>
+          </button>
+          <button class="ghost-btn" onclick="scrollToSection('menu')">
+            View Today’s Menu
+          </button>
+        </div>
+
+        <ul class="hero-highlights">
+          <li>Pure vegetarian Satvik meals for home & office</li>
+          <li>Freshly prepared on order, no re-heating</li>
+          <li>Ideal for pooja, fasts, and mindful eating</li>
+        </ul>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="https://media.istockphoto.com/id/1364757902/photo/crispy-crepes-made-of-barnyard-millets-and-lentils-commonly-known-as-barnyard-millet-ghee.webp?a=1&b=1&s=612x612&w=0&k=20&c=7isaj9N3_UWwpNCGyghFMw1T9i0H5Q-rPh9iLlaepVo="
+          alt="Fresh Satvik thali from The Vaishnav Café"
+          class="hero-img"
+        />
+        <div class="hero-card">
+          <h3>Today’s Special</h3>
+          <p class="hero-card-caption">
+            “Warm phulkas, homely sabzi and dal – just like your own kitchen.”
+          </p>
+          <p class="hero-card-meta">Limited portions • Pre-order recommended</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menu / Highlights -->
+  <section id="menu" class="Menu-section">
+    <div class="Menu-inner">
+      <div class="Menu-grid">
+        <div>
+          <span class="label">Our offerings</span>
+          <h2 class="section-heading">Satvik meals for every day</h2>
+          <p class="section-subtitle">
+            Choose from balanced thalis, light dinners, and special pooja-friendly preparations.
+          </p>
+
+          <div class="Menu-row">
+            <button class="Menu-btn active" data-menu="daily" onclick="switchMenu('daily')">
+              <img src="https://media.istockphoto.com/id/2157232096/vector/south-indian-thali-meal.webp?a=1&b=1&s=612x612&w=0&k=20&c=ytSLr3IP7s2g6z5F2KTilMrNvcYVlsPmSDjhHnHg-Ag=" alt="Daily meals icon" class="menu-icon" />
+            </button>
+            <button class="Menu-btn" data-menu="pooja" onclick="switchMenu('pooja')">
+              <img src="https://media.istockphoto.com/id/2171454361/photo/a-plate-of-prasadam-ready-for-indian-hindu-puja.webp?a=1&b=1&s=612x612&w=0&k=20&c=EQ4Bl_iRBFkk6mZNkEoZx8QkXDAAe-Rp7SPbV7jJ_aw=" alt="Pooja meals icon" class="menu-icon" />
+            </button>
+            <button class="Menu-btn" data-menu="office" onclick="switchMenu('office')">
+              <img src="https://media.istockphoto.com/id/1256242868/photo/indian-veg-lunchbox-for-office-of-workplace-with-chole-dal-fry-rice-and-chapati.webp?a=1&b=1&s=612x612&w=0&k=20&c=YZxx4FbJpkuXT5aeHTnRoeXAXSbp17V9EeSbOWrSGko=" alt="Office tiffin icon" class="menu-icon" />
+            </button>
+            
+          </div>
+
+          <div id="menu-daily" class="Menu-pane active">
+            <h3>Daily Satvik Thali</h3>
+            <ul class="menu-list">
+              <li>2 phulkas or rice • Seasonal sabzi • Dal • Salad</li>
+              <li>Moderate spice, light on oil, homely taste</li>
+              <li>Perfect for lunch or dinner</li>
+            </ul>
+          </div>
+
+          <div id="menu-pooja" class="Menu-pane">
+            <h3>Pooja & Fasting Plate</h3>
+            <ul class="menu-list">
+              <li>Customizable vrat-friendly options</li>
+              <li>Clean, onion–garlic free kitchen</li>
+              <li>Ideal for small family rituals</li>
+            </ul>
+          </div>
+
+          <div id="menu-office" class="Menu-pane">
+            <h3>Office Tiffin Box</h3>
+            <ul class="menu-list">
+              <li>Neatly packed, travel-friendly portions</li>
+              <li>Balanced, non-greasy, easy to digest</li>
+              <li>Flexible weekly and monthly plans</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="Menu-visual">
+          <img
+            src="https://media.istockphoto.com/id/495188382/photo/indian-pulav-vegetable-rice-veg-biryani-basmati-rice.jpg?s=2048x2048&w=is&k=20&c=naruIWluziGukzcFBpiQhO37axy488YdJzvSsC-ndSc="
+            alt="Satvik meal bowl from The Vaishnav Café"
+            class="menu-img"
+          />
+          <p class="menu-caption">
+            “Home-style purity, café-style convenience.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-text">
+        <span class="label">Why Vaishnav</span>
+        <h2 class="section-heading">Satvik food, made with intention</h2>
+        <p>
+          Every meal is prepared in a calm, clean kitchen, following traditional
+          Satvik cooking methods without onion or garlic.
+        </p>
+        <p>
+          Ingredients are sourced fresh daily so that what reaches your plate
+          is simple, nourishing and light on the stomach.
+        </p>
+
+        <ul class="about-list">
+          <li>100% pure vegetarian, Satvik only</li>
+          <li>No artificial colours, preservatives or premixes</li>
+          <li>Made fresh on order, no central bulk cooking</li>
+        </ul>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card">
+          <h3>For pooja & vrats</h3>
+          <p>Order customized plates aligned with your fasting rules.</p>
+        </div>
+        <div class="about-card">
+          <h3>For families</h3>
+          <p>Homely food that elders and kids can enjoy together.</p>
+        </div>
+        <div class="about-card">
+          <h3>For working days</h3>
+          <p>Light tiffins that keep you focused, not sleepy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order / Contact -->
+  <section id="order" class="order-section">
+    <div class="order-inner">
+      <div class="order-copy">
+        <span class="label">Pre-book your meal</span>
+        <h2 class="section-heading">Reserve your Satvik plate</h2>
+        <p class="section-subtitle">
+          Share your details and preferred time. The kitchen will call to confirm your order.
+        </p>
+
+        <form class="Order-form" onsubmit="handleOrderSubmit(event)">
+          <div class="stacked-inputs">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="tel" id="phone" placeholder="Phone number" required />
+            <input type="text" id="location" placeholder="Area / Landmark" required />
+            <input type="datetime-local" id="time" required />
+          </div>
+
+          <textarea
+            id="requirements"
+            class="textarea"
+            rows="3"
+            placeholder="Any specific requirements? (e.g. vrat, less spice)"
+          ></textarea>
+
+          <button type="submit" class="primary-btn" id="order-btn">
+            <span class="btn-text">Send Booking Request</span>
+            <span class="loader"></span>
+          </button>
+
+          <p id="order-message" class="order-message"></p>
+        </form>
+      </div>
+
+      <div id="contact" class="order-contact">
+        <div class="contact-card">
+          <h3>Reach us directly</h3>
+          <p>Call / WhatsApp: <a href="tel:+91XXXXXXXXXX">+91-6372927494</a></p>
+          <p>Bhubaneswar • Home-style Satvik kitchen</p>
+          <p class="contact-note">
+            Orders are accepted in limited slots so the food stays fresh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> The Vaishnav Café. All rights reserved.</p>
+  </footer>
+
+  <script src="cafe.js"></script>
+</body>
+</html>
